@@ -10,7 +10,7 @@ public class Pronostico {
 	public int getPuntos(String pronPath, String resPath) {
 	int puntos = 0, aux1, aux2 = 5, i = 0;
 	String[] arr = null;
-	Path RutaPronostico = FileSystems.getDefault().getPath(pronPath);
+	Path RutaPronostico = Paths.get(pronPath);
 	try {
 		for(String Pronos : Files.readAllLines(RutaPronostico)) {
 			i++;
@@ -33,7 +33,7 @@ public class Pronostico {
 			}
 		}
 	} catch (IOException e) {
-		System.out.println("no funco gordito");
+		System.out.println("no anduvo");
 		e.printStackTrace();
 	}
 	return puntos;

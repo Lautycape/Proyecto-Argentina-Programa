@@ -21,7 +21,6 @@ public class Ronda {
 			}
 			this.n = n;
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return n;

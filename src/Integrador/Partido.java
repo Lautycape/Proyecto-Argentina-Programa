@@ -11,7 +11,7 @@ public class Partido {
 		int j = 1;
 		String[] goles = new String[2];
 		String[] arr = null;
-		Path RutaResultado = FileSystems.getDefault().getPath(resPath);
+		Path RutaResultado = Paths.get(resPath);
 		try {
 			for(String Resul : Files.readAllLines(RutaResultado)) {
 				arr = Resul.split(";");
@@ -23,7 +23,7 @@ public class Partido {
 				}
 			}
 			} catch (IOException e) {
-				System.out.println("no funco gordito");
+				System.out.println("no anduvo");
 			e.printStackTrace();
 		}
 		return goles;
